@@ -30,7 +30,7 @@ class DlogrRequestMixin(object):
             auth = self.auth_credentials
 
         try:
-            return requests_method(url, auth=auth, headers=headers, data=data, params=params)
+            return requests_method(url, auth=auth, headers=headers, data=data, params=params, verify=False)
         except RequestException as e:
             raise DlogrAPIError('{}'.format(e))
 
