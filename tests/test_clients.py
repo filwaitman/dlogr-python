@@ -21,6 +21,7 @@ class DlogrModelMixinTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data=None,
             params={'limit': 30, 'offset': 0},
+            verify=mock.ANY,
         )
 
     def test_resource_list_customers(self, requests_patched):
@@ -33,6 +34,7 @@ class DlogrModelMixinTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data=None,
             params={'limit': 30, 'offset': 0},
+            verify=mock.ANY,
         )
 
     def test_resource_list_auth_token(self, requests_patched):
@@ -45,6 +47,7 @@ class DlogrModelMixinTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY, 'Authorization': 'Token weirdhashhere'},
             data=None,
             params={'limit': 30, 'offset': 0},
+            verify=mock.ANY,
         )
 
     def test_resource_list_auth_credentials(self, requests_patched):
@@ -57,6 +60,7 @@ class DlogrModelMixinTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data=None,
             params={'limit': 30, 'offset': 0},
+            verify=mock.ANY,
         )
 
     def test_resource_list_request_error(self, requests_patched):
@@ -77,6 +81,7 @@ class DlogrModelMixinTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data=None,
             params={'limit': 30, 'offset': 0, 'fields': 'unicorn', 'answer': 42},
+            verify=mock.ANY,
         )
 
     def test_resource_list_limit_offset(self, requests_patched):
@@ -89,6 +94,7 @@ class DlogrModelMixinTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data=None,
             params={'limit': 100, 'offset': 50},
+            verify=mock.ANY,
         )
 
 
@@ -104,6 +110,7 @@ class DlogrClientCreateTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data={'email': 'super@email.com', 'password': 'sikret', 'name': 'Hamster'},
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_create_customers(self, requests_patched):
@@ -116,6 +123,7 @@ class DlogrClientCreateTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data={'email': 'super@email.com', 'password': 'sikret', 'name': 'Hamster'},
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_create_auth_token(self, requests_patched):
@@ -128,6 +136,7 @@ class DlogrClientCreateTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY, 'Authorization': 'Token weirdhashhere'},
             data={'email': 'super@email.com', 'password': 'sikret', 'name': 'Hamster'},
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_create_auth_credentials(self, requests_patched):
@@ -140,6 +149,7 @@ class DlogrClientCreateTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data={'email': 'super@email.com', 'password': 'sikret', 'name': 'Hamster'},
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_create_request_error(self, requests_patched):
@@ -163,6 +173,7 @@ class DlogrClientRetrieveTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data=None,
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_retrieve_customers(self, requests_patched):
@@ -175,6 +186,7 @@ class DlogrClientRetrieveTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data=None,
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_retrieve_auth_token(self, requests_patched):
@@ -187,6 +199,7 @@ class DlogrClientRetrieveTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY, 'Authorization': 'Token weirdhashhere'},
             data=None,
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_retrieve_auth_credentials(self, requests_patched):
@@ -199,6 +212,7 @@ class DlogrClientRetrieveTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data=None,
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_retrieve_request_error(self, requests_patched):
@@ -222,6 +236,7 @@ class DlogrClientUpdateTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data={'email': 'new@email.com', 'name': 'New Hamster'},
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_update_customers(self, requests_patched):
@@ -234,6 +249,7 @@ class DlogrClientUpdateTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data={'email': 'new@email.com', 'name': 'New Hamster'},
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_update_auth_token(self, requests_patched):
@@ -246,6 +262,7 @@ class DlogrClientUpdateTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY, 'Authorization': 'Token weirdhashhere'},
             data={'email': 'new@email.com', 'name': 'New Hamster'},
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_update_auth_credentials(self, requests_patched):
@@ -258,6 +275,7 @@ class DlogrClientUpdateTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data={'email': 'new@email.com', 'name': 'New Hamster'},
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_update_request_error(self, requests_patched):
@@ -281,6 +299,7 @@ class DlogrClientDeleteTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data=None,
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_delete_customers(self, requests_patched):
@@ -293,6 +312,7 @@ class DlogrClientDeleteTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data=None,
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_delete_auth_token(self, requests_patched):
@@ -305,6 +325,7 @@ class DlogrClientDeleteTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY, 'Authorization': 'Token weirdhashhere'},
             data=None,
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_delete_auth_credentials(self, requests_patched):
@@ -317,6 +338,7 @@ class DlogrClientDeleteTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data=None,
             params=None,
+            verify=mock.ANY,
         )
 
     def test_resource_delete_request_error(self, requests_patched):
@@ -341,6 +363,7 @@ class DlogClientAuthTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data={'email': 'my@email.com', 'password': 'password'},
             params=None,
+            verify=mock.ANY,
         )
 
     def test_verify_account(self, requests_patched):
@@ -354,6 +377,7 @@ class DlogClientAuthTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data={'token': 'wildhash'},
             params=None,
+            verify=mock.ANY,
         )
 
     def test_reset_password(self, requests_patched):
@@ -367,6 +391,7 @@ class DlogClientAuthTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data={'email': 'my@email.com'},
             params=None,
+            verify=mock.ANY,
         )
 
     def test_change_password(self, requests_patched):
@@ -380,4 +405,5 @@ class DlogClientAuthTestCase(unittest.TestCase):
             headers={'user-agent': mock.ANY},
             data={'email': 'my@email.com', 'password': 'pwd', 'new_password': 'better', 'reset_token': 'hashhh'},
             params=None,
+            verify=mock.ANY,
         )

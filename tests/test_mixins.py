@@ -63,6 +63,7 @@ class DlogrClientListTestCase(unittest.TestCase):
             auth=None,
             headers={u'Authorization': 'Token my-cool-access-key', 'user-agent': mock.ANY},
             params=None,
+            verify=mock.ANY,
             data={
                 'human_identifier': 'Human identifier',
                 'timestamp': '2016-01-01T12:12:12',
@@ -81,6 +82,7 @@ class DlogrClientListTestCase(unittest.TestCase):
             auth=None,
             headers={u'Authorization': 'Token my-cool-access-key', 'user-agent': mock.ANY},
             params=None,
+            verify=mock.ANY,
             data={
                 'human_identifier': 'Human identifier',
                 'timestamp': '2016-07-05T15:15:15',
@@ -99,6 +101,7 @@ class DlogrClientListTestCase(unittest.TestCase):
             auth=None,
             headers={u'Authorization': 'Token my-cool-access-key', 'user-agent': mock.ANY},
             params=None,
+            verify=mock.ANY,
             data={
                 'human_identifier': 'fixture2_other_field',
                 'timestamp': '2016-01-01T12:12:12',
@@ -117,6 +120,7 @@ class DlogrClientListTestCase(unittest.TestCase):
             auth=None,
             headers={u'Authorization': 'Token my-cool-access-key', 'user-agent': mock.ANY},
             params=None,
+            verify=mock.ANY,
             data={
                 'human_identifier': 'fixture2_other_field',
                 'timestamp': '2016-07-05T15:15:15',

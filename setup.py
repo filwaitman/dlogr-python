@@ -14,6 +14,8 @@ setup(
     download_url='{}/tarball/{}'.format(BASE_CVS_URL, __version__),
     test_suite='tests',
     tests_require=[x.strip() for x in open('requirements_test.txt').readlines()],
+    package_data={'dlogr': ['gd_bundle-g2-g1.crt']},
+    include_package_data=True,
     keywords=[],
     classifiers=[
         "Development Status :: 1 - Planning",

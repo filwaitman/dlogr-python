@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals, absolute_import
+import os
 import sys
 
 from requests.exceptions import RequestException
@@ -19,6 +20,9 @@ class DlogrRequestMixin(object):
         return '{}{}'.format(self.base_api_url, path)
 
     def _request(self, requests_method, url, data=None, params=None):
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        cert_path = os.path.join(current_dir, 'gd_bundle-g2-g1.crt')
+
         auth = None
         headers = {
             'user-agent': 'dlogr/{} python/{}'.format(__version__, sys.version.split()[0]),
@@ -30,7 +34,7 @@ class DlogrRequestMixin(object):
             auth = self.auth_credentials
 
         try:
-            return requests_method(url, auth=auth, headers=headers, data=data, params=params, verify=False)
+            return requests_method(url, auth=auth, headers=headers, data=data, params=params, verify=cert_path)
         except RequestException as e:
             raise DlogrAPIError('{}'.format(e))
 
