@@ -1,7 +1,7 @@
 from setuptools import setup
 from dlogr import __version__
 
-BASE_CVS_URL = 'http://github.com/filwaitman/dlogr'
+BASE_CVS_URL = 'https://github.com/filwaitman/dlogr-python/'
 
 setup(
     name='dlogr',
